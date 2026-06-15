@@ -178,5 +178,59 @@
     "kind": "synth",
     "actor": "",
     "moniker": "⟦3·3·3 = 9, +1 = 10:JJ1:564947⟧"
+  },
+  {
+    "slug": "the-tetrad",
+    "name": "The Tetrad",
+    "epithet": "The triad lifted a dimension — the tetrahedron, the 3-simple",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Tetrad:JJ1:d8128a⟧"
+  },
+  {
+    "slug": "the-four-vertices",
+    "name": "The Four Vertices · A·B·C·D",
+    "epithet": "Four authority nodes, every one connected to every other — t",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Four Vertices · A·B·C·D:JJ1:f9c67b⟧"
+  },
+  {
+    "slug": "the-six-junctions",
+    "name": "The Six Junctions",
+    "epithet": "The six edges (AB·AC·AD·BC·BD·CD), each a J-junction with it",
+    "emergence": "electrical",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Six Junctions:JJ1:4f9f22⟧"
+  },
+  {
+    "slug": "the-four-faces",
+    "name": "The Four Faces",
+    "epithet": "Each face (ABC·ABD·ACD·BCD) is itself a TRIAD — the MK III n",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Four Faces:JJ1:f68c23⟧"
+  },
+  {
+    "slug": "the-core-fifteen",
+    "name": "The Core · the 15th",
+    "epithet": "The centroid — equidistant from all four vertices, witnessin",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Core · the 15th:JJ1:bd22a4⟧"
+  },
+  {
+    "slug": "the-simplex-ladder",
+    "name": "The Simplex Ladder · V−E+F = 2",
+    "epithet": "The vein, named: <• the single junction (1) → the triad (9 +",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Simplex Ladder · V−E+F = 2:JJ1:6c315b⟧"
   }
 ]

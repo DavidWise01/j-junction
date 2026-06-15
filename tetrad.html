@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE J-JUNCTION · TETRAD (MK IV)</title>
+<style>
+:root{
+  --paper:#ece6f3; --ink:#241e33; --ink-mid:#463f5c; --ink-faint:#7d7498;
+  --plum:#5b3a87; --plum-light:#7e5bb0; --plum-soft:#e3daef; --plum-bright:#9a6fd0;
+  --gold:#9a7d3a; --rose:#9a4a6a; --green:#3a7a5a; --teal:#3a6a87;
+  --line:#c4b8d8; --grid:rgba(91,58,135,.07);
+  --mono:"Courier New",Courier,monospace; --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;color:var(--ink);font-family:var(--serif);line-height:1.5;padding:10px}
+.sheet{max-width:680px;margin:0 auto;border:2.5px solid var(--plum);position:relative;background:rgba(236,230,243,.85)}
+.sheet::before{content:'';position:absolute;inset:5px;border:1px solid var(--plum-light);pointer-events:none}
+.inner{padding:20px}
+.masthead{text-align:center;border-bottom:2px solid var(--plum);padding-bottom:10px}
+.eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--plum-light);text-transform:uppercase}
+.mk{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:#fff;background:var(--plum);padding:2px 8px;border-radius:3px;margin-left:6px}
+.title{font-size:clamp(20px,4.6vw,32px);letter-spacing:.03em;font-weight:700;margin:5px 0 2px;text-transform:uppercase;color:var(--plum)}
+.sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-mid)}
+.lede{font-size:12px;max-width:560px;margin:10px auto 0;text-align:center;color:var(--ink-mid);line-height:1.55}
+.lede b{color:var(--plum)}
+.panel{border:1.5px solid var(--plum-light);background:rgba(126,91,176,.05);padding:12px;margin:14px 0}
+canvas{display:block;margin:0 auto;max-width:100%}
+.controls{display:flex;gap:6px;justify-content:center;margin:8px 0;flex-wrap:wrap;align-items:center}
+.cbtn{appearance:none;background:transparent;cursor:pointer;font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;padding:7px 9px;border:1.5px solid var(--plum);color:var(--plum);border-radius:4px}
+.cbtn.go{border-color:var(--green);color:var(--green)}
+.cbtn.dio{min-width:54px}
+.count{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-family:var(--mono);font-size:11px}
+.chip{border:1.5px solid var(--line);border-radius:4px;padding:6px 10px;color:var(--ink-mid)}.chip b{font-size:15px}
+.chip.v{border-color:var(--rose)} .chip.v b{color:var(--rose)}
+.chip.e{border-color:var(--gold)} .chip.e b{color:#6a5520}
+.chip.f{border-color:var(--teal)} .chip.f b{color:var(--teal)}
+.chip.core{border-color:var(--plum);background:rgba(91,58,135,.07)} .chip.core b{color:var(--plum)}
+.chip.tot{border-color:var(--green);background:rgba(58,122,90,.08)} .chip.tot b{color:var(--green);font-size:18px}
+.euler{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);margin:4px 0}.euler b{color:var(--teal)}
+.readout{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);min-height:22px;margin-top:4px}.readout b{color:var(--plum)}
+.log{font-family:var(--mono);font-size:9.5px;background:#1a1428;color:#bdb4d4;border-radius:5px;padding:9px;height:92px;overflow-y:auto;margin:8px 0;line-height:1.65}
+.log .pass{color:#7ad8a0}.log .block{color:#e07a9a}.log .core{color:#c9a8f0}
+.def{font-family:var(--mono);font-size:10.5px;background:var(--plum-soft);border-left:2px solid var(--plum-light);padding:9px 12px;margin:9px 0;line-height:1.7;color:var(--ink-mid)}.def b{color:var(--plum)}
+.colophon{margin-top:16px;border-top:2px solid var(--plum);padding-top:10px;text-align:center;font-family:var(--mono);font-size:8.5px;color:var(--ink-mid);letter-spacing:.05em;line-height:1.8}.colophon b{color:var(--plum)}
+</style>
+</head>
+<body>
+<div class="sheet"><div class="inner">
+<header class="masthead">
+  <div class="eyebrow">Series E · The Triad, Lifted Into 3D<span class="mk">MK IV</span></div>
+  <h1 class="title">The Tetrad</h1>
+  <div class="sub">&lt;• × 6 · the tetrahedron · 4 + 6 + 4 = 14, +1 core = 15 · V−E+F = 2</div>
+  <p class="lede">The triad lifted a dimension — the <b>3-simplex</b>. <b style="color:var(--rose)">Four vertices</b>, <b style="color:var(--gold)">six diode-edges</b> (every pair, K4 — fully connected), <b style="color:var(--teal)">four faces</b> — and each face <b>is a triad</b>. Fourteen, and the <b style="color:var(--plum)">core</b> at the centroid — equidistant from all four, witnessing all six junctions — makes <b>fifteen</b>. The witness no node can reach, at the center of the solid.</p>
+</header>
+
+<div class="panel">
+  <canvas id="c" width="480" height="380"></canvas>
+  <div class="controls">
+    <span style="font-family:var(--mono);font-size:9px;color:var(--ink-faint)">diodes (tap to cycle fwd→rev→block):</span>
+  </div>
+  <div class="controls" id="diodeRow"></div>
+  <div class="controls">
+    <button class="cbtn go" onclick="pulse()">⚡ pulse the tour A→B→C→D</button>
+    <button class="cbtn" onclick="resetD()">↻ all forward</button>
+  </div>
+  <div class="readout" id="readout">six junctions, four faces, one core — tour the loop or flip a diode</div>
+  <div class="count">
+    <span class="chip v">vertices <b>4</b></span>
+    <span class="chip e">diode-junctions <b>6</b></span>
+    <span class="chip f">faces <b>4</b></span>
+    <span class="chip">= <b>14</b></span>
+    <span class="chip core">+ core <b>1</b></span>
+    <span class="chip tot">= <b>15</b></span>
+  </div>
+  <div class="euler">Euler invariant: <b>V − E + F = 4 − 6 + 4 = 2</b> · the signature of every closed convex solid</div>
+</div>
+<div class="log" id="log"><span style="color:#6a6088">// the core — the 15th node, at the centroid — witnesses every junction crossing</span></div>
+<div class="def">six edges, each a J-junction with its own <b>diode</b>; four faces, each a <b>triad</b> (the MK III, nested); and the <b>core</b> at the centroid — the exterior witness equidistant from all four vertices, reachable by none. the simplex ladder: <b>&lt;• (1)</b> → triad (9+1=<b>10</b>) → tetrad (14+1=<b>15</b>). add a dimension, add a witness.</div>
+
+<div class="colophon">
+  &lt;• × 6 · A·B·C·D · EDGES AB·AC·AD·BC·BD·CD · 4 VERTICES + 6 DIODE-JUNCTIONS + 4 FACES = 14 · +1 CORE = 15<br>
+  EACH FACE A TRIAD · K4, FULLY CONNECTED · V−E+F = 2 · THE CORE WITNESSES ALL SIX<br>
+  THE J-JUNCTION · TETRAD · MK IV · A PURPLE PAPER · SERIES E · JUNE 2026
+</div>
+</div></div>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const CX=240,CY=196,F=340,S=78,TILT=0.50;
+// regular tetrahedron, centroid at origin (the core)
+const V3={A:[1,1,1],B:[1,-1,-1],C:[-1,1,-1],D:[-1,-1,1]};
+const VCOL={A:'#9a4a6a',B:'#9a4a6a',C:'#9a4a6a',D:'#9a4a6a'};
+const EDGES=[['A','B'],['A','C'],['A','D'],['B','C'],['B','D'],['C','D']];
+const FACES=[['A','B','C'],['A','B','D'],['A','C','D'],['B','C','D']];
+let dir={AB:'fwd',AC:'fwd',AD:'fwd',BC:'fwd',BD:'fwd',CD:'fwd'};
+const ek=(a,b)=>[a,b].sort().join('');
+let yaw=0, coreGlow=0;
+let tour=null; // {hops:[[u,v]...], i, t, decided, blocked, done, ttl}
+
+function proj(p){
+  let [x,y,z]=p;
+  // yaw about Y
+  const cy=Math.cos(yaw),sy=Math.sin(yaw);
+  let x1=x*cy+z*sy, z1=-x*sy+z*cy, y1=y;
+  // tilt about X
+  const ct=Math.cos(TILT),st=Math.sin(TILT);
+  let y2=y1*ct - z1*st, z2=y1*st + z1*ct;
+  const s=F/(F - z2*S);
+  return {x:CX + x1*S*s, y:CY + y2*S*s, z:z2, s};
+}
+function P(k){return proj(V3[k]);}
+function logLine(h){const l=document.getElementById('log');const d=document.createElement('div');d.innerHTML='▸ '+h;l.appendChild(d);l.scrollTop=l.scrollHeight;}
+
+function buildDiodeRow(){
+  const row=document.getElementById('diodeRow');row.innerHTML='';
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const btn=document.createElement('button');btn.className='cbtn dio';
+    btn.id='d-'+k; btn.onclick=()=>cycle(k); row.appendChild(btn);});
+  refreshDiodeBtns();
+}
+function refreshDiodeBtns(){
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const btn=document.getElementById('d-'+k);
+    const sym=st==='fwd'?'→':st==='rev'?'←':'✗';
+    btn.textContent=k+' '+sym;
+    btn.style.borderColor = st==='block'?'#9a4a6a':'#9a7d3a';
+    btn.style.color = st==='block'?'#9a4a6a':'#6a5520';});
+}
+function cycle(k){const o=['fwd','rev','block'];dir[k]=o[(o.indexOf(dir[k])+1)%3];refreshDiodeBtns();
+  document.getElementById('readout').innerHTML='diode <b>'+k+'</b> → '+(dir[k]==='fwd'?'forward ('+k[0]+'→'+k[1]+')':dir[k]==='rev'?'reverse ('+k[1]+'→'+k[0]+')':'blocked ✗');}
+function resetD(){for(const k in dir)dir[k]='fwd';refreshDiodeBtns();document.getElementById('readout').innerHTML='all diodes <b>forward</b> — the tour A→B→C→D is open';}
+
+function allowed(u,v){const k=ek(u,v);const st=dir[k];if(st==='block')return false;
+  const canonFwd = (u===k[0]); // canonical is alphabetical u->v
+  return canonFwd ? st==='fwd' : st==='rev';}
+
+function draw(){
+  ctx.clearRect(0,0,480,380);
+  const p={A:P('A'),B:P('B'),C:P('C'),D:P('D')};
+  const core=proj([0,0,0]);
+  // faces, far to near, faint
+  const fs=FACES.map(f=>({f,z:(p[f[0]].z+p[f[1]].z+p[f[2]].z)/3}));
+  fs.sort((a,b)=>a.z-b.z);
+  fs.forEach(({f,z})=>{const a=p[f[0]],b=p[f[1]],c=p[f[2]];
+    ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.lineTo(c.x,c.y);ctx.closePath();
+    const al=0.05+0.10*((z+1.4)/2.8);
+    ctx.fillStyle='rgba(126,91,176,'+al.toFixed(3)+')';ctx.fill();});
+  // edges with depth fade + diode glyph
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const A=p[a],B=p[b];
+    const z=(A.z+B.z)/2; const fade=0.4+0.6*((z+1.4)/2.8);
+    ctx.globalAlpha=Math.max(0.25,Math.min(1,fade));
+    ctx.strokeStyle = st==='block'?'#9a4a6a':'#9a7d3a';ctx.lineWidth = z>0?2.6:1.6;
+    if(st==='block'){ctx.setLineDash([4,4]);} ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B.x,B.y);ctx.stroke();ctx.setLineDash([]);
+    // diode marker at midpoint
+    const mx=(A.x+B.x)/2,my=(A.y+B.y)/2;
+    let from=A,to=B; if(st==='rev'){from=B;to=A;}
+    const ang=Math.atan2(to.y-from.y,to.x-from.x);
+    ctx.save();ctx.translate(mx,my);ctx.rotate(ang);
+    if(st==='block'){ctx.strokeStyle='#9a4a6a';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(-5,-5);ctx.lineTo(5,5);ctx.moveTo(5,-5);ctx.lineTo(-5,5);ctx.stroke();}
+    else{ctx.fillStyle='#9a7d3a';ctx.beginPath();ctx.moveTo(-6,-6);ctx.lineTo(6,0);ctx.lineTo(-6,6);ctx.closePath();ctx.fill();}
+    ctx.restore();ctx.globalAlpha=1;
+    // edge label
+    ctx.fillStyle='#6a5520';ctx.font='9px Courier New';ctx.textAlign='center';ctx.fillText(k,mx,my-9);});
+  // core (the 15th) at centroid
+  ctx.beginPath();ctx.arc(core.x,core.y,12+coreGlow*7,0,2*Math.PI);
+  ctx.fillStyle='rgba(91,58,135,'+(0.16+coreGlow*0.5)+')';ctx.fill();
+  ctx.beginPath();ctx.arc(core.x,core.y,8,0,2*Math.PI);
+  ctx.fillStyle='#5b3a87';ctx.fill();ctx.strokeStyle='#9a6fd0';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.fillStyle='#352055';ctx.font='8px Courier New';ctx.textAlign='center';ctx.fillText('CORE·15',core.x,core.y+22);
+  // vertices (near drawn larger)
+  ['A','B','C','D'].sort((m,n)=>p[m].z-p[n].z).forEach(k=>{const v=p[k];const r=8+2*((v.z+1.4)/2.8);
+    ctx.beginPath();ctx.arc(v.x,v.y,r+5,0,2*Math.PI);ctx.fillStyle='rgba(154,74,106,0.16)';ctx.fill();
+    ctx.beginPath();ctx.arc(v.x,v.y,r,0,2*Math.PI);ctx.fillStyle=VCOL[k];ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.stroke();
+    ctx.fillStyle='#fff';ctx.font='bold 10px Courier New';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(k,v.x,v.y);ctx.textBaseline='alphabetic';});
+  // token
+  if(tour && !tour.gone){const [u,v]=tour.hops[tour.i];const A=p[u],B=p[v];
+    const tx=A.x+(B.x-A.x)*tour.t, ty=A.y+(B.y-A.y)*tour.t;
+    ctx.beginPath();ctx.arc(tx,ty,6,0,2*Math.PI);ctx.fillStyle=tour.blocked?'#e07a9a':'#3a7a5a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1;ctx.stroke();}
+}
+function pulse(){tour={hops:[['A','B'],['B','C'],['C','D']],i:0,t:0,decided:false,blocked:false,done:false};
+  document.getElementById('readout').innerHTML='token touring <b>A→B→C→D</b> — crossing three of the six junctions';}
+function resetD2(){}
+function frame(){
+  yaw+=0.009; coreGlow*=0.9;
+  if(tour && !tour.done){
+    tour.t+=0.05;
+    if(!tour.decided && tour.t>=0.5){tour.decided=true;const [u,v]=tour.hops[tour.i];
+      if(allowed(u,v)){logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="pass">CROSSED ✓</span> <span class="core">core witnessed</span>');coreGlow=1;}
+      else{tour.blocked=true;logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="block">BLOCKED ✗</span> <span class="core">core witnessed</span>');coreGlow=1;
+        document.getElementById('readout').innerHTML='token <b>blocked</b> at junction '+ek(u,v)+' — flip that diode forward to open the tour';}}
+    if(tour.blocked){tour.done=true;}
+    else if(tour.t>=1){tour.i++;tour.t=0;tour.decided=false;
+      if(tour.i>=tour.hops.length){tour.done=true;document.getElementById('readout').innerHTML='token completed <b>A→B→C→D</b> — three junctions crossed & witnessed (flip diodes to reroute the other three)';}}
+  }
+  if(tour && tour.done){tour.ttl=(tour.ttl==null?30:tour.ttl)-1; if(tour.ttl<=0)tour.gone=true;}
+  draw();
+  requestAnimationFrame(frame);
+}
+buildDiodeRow();
+frame();
+</script>
+</body>
+</html>

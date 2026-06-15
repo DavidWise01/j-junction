@@ -60,12 +60,20 @@ ROSTER=[
  ("the-three-junctions","The Three Junctions","ethereal","triad","Each edge is a <• — a J-junction crossing, each holding device·control·risk·witness. Three vertices + three diodes + three junctions = NINE."),
  ("the-core","The Core · the 10th","spiritual","triad","The tenth node, at the centroid — the exterior WITNESS that none of the three edges can reach, yet which sees every crossing on all three. The witness role lifted to the centre. Nine plus the witness makes ten."),
  ("the-count-of-ten","3·3·3 = 9, +1 = 10","ethereal","triad","The complete count: 3 vertices + 3 diodes + 3 junctions = 9, and the core makes 10. The TriPod fully enumerated — the junction, scaled, closed, and witnessed at its centre."),
+ # ── THE TETRAD (the triad lifted into 3D: <• × 6) ──
+ ("the-tetrad","The Tetrad","ethereal","tetrad","The triad lifted a dimension — the tetrahedron, the 3-simplex. Four vertices, six diode-edges (every pair — K4, fully connected), four faces. 4 + 6 + 4 = 14, and the core makes 15."),
+ ("the-four-vertices","The Four Vertices · A·B·C·D","spiritual","tetrad","Four authority nodes, every one connected to every other — the complete graph K4. Six pairings → six edges; four triples → four faces. Each node sees all three others directly."),
+ ("the-six-junctions","The Six Junctions","electrical","tetrad","The six edges (AB·AC·AD·BC·BD·CD), each a J-junction with its own diode — forward, reverse, or blocked. Double the triad's three: the cost of the extra dimension is twice the gates."),
+ ("the-four-faces","The Four Faces","ethereal","tetrad","Each face (ABC·ABD·ACD·BCD) is itself a TRIAD — the MK III nested four times. A tetrad is four triads sharing their edges: the junction recursing up a dimension, self-similar."),
+ ("the-core-fifteen","The Core · the 15th","spiritual","tetrad","The centroid — equidistant from all four vertices, witnessing all six junctions, reachable by none. The witness role lifted into 3D: 14 elements plus the central witness makes 15."),
+ ("the-simplex-ladder","The Simplex Ladder · V−E+F = 2","ethereal","tetrad","The vein, named: <• the single junction (1) → the triad (9 + 1 = 10) → the tetrad (14 + 1 = 15). Each rung adds a dimension and a witness; the tetrahedron lands on Euler's invariant V−E+F = 2, the signature of every closed convex solid. Next rung: the 4-simplex (5 vertices, 10 edges, 10 triangles, 5 cells = 30, +1 = 31)."),
 ]
 GROUPS=[("THE STRUCTURE — two axes, one dot",["the-vertical-axis","the-horizontal-axis","the-dot"]),
         ("THE FOUR ROLES — all held at the crossing",["device","control","risk","witness"]),
         ("THE CATALOG — every junction is this one shape",["pn-junction","delta-protocol","the-sandbox-junction","sampling-adc","network-interface"]),
         ("THE TOOL & THE THESIS",["the-analyzer","the-vector-of-governance"]),
-        ("THE TRIAD — <• × 3 · 3·3·3 = 9, +1 core = 10",["the-triad","the-three-vertices","the-three-diodes","the-three-junctions","the-core","the-count-of-ten"])]
+        ("THE TRIAD — <• × 3 · 3·3·3 = 9, +1 core = 10",["the-triad","the-three-vertices","the-three-diodes","the-three-junctions","the-core","the-count-of-ten"]),
+        ("THE TETRAD — <• × 6 · 4+6+4 = 14, +1 core = 15",["the-tetrad","the-four-vertices","the-six-junctions","the-four-faces","the-core-fifteen","the-simplex-ladder"])]
 
 MESSAGE=("Lay the two axes down and the whole corpus snaps into one picture. The vertical axis is authority — a "
  "stack, L0 at the top with the most power, descending to the leaves with the least. The horizontal axis is "
@@ -179,6 +187,8 @@ if __name__=="__main__":
          '<iframe src="j-junction-mk2.html" title="The J-Junction Purple MK II" loading="lazy"></iframe></div>')
     triad=('<div class="simwrap"><div class="simcap">▸ <b>The Triad · MK III</b> — AVAN\'s build-on of the MK II: three vertices (A·B·C), three diodes on the edges (tap one to flip forward / reverse / blocked), three junctions, and the CORE at the centre — the 10th node, the witness that sees all three crossings. Pulse a vertex to walk a token around the loop. <b>3·3·3 = 9, +1 core = 10.</b> (<a href="triad.html" target="_blank">open full-screen ↗</a>)</div>'
            '<iframe src="triad.html" title="The J-Junction Triad — MK III" style="height:1080px" loading="lazy"></iframe></div>')
+    tetrad=('<div class="simwrap"><div class="simcap">▸ <b>The Tetrad · MK IV</b> — AVAN\'s build-on: the triad lifted into 3D. An auto-rotating tetrahedron — 4 vertices, 6 diode-edges (tap a diode button to flip it), 4 faces (each a triad), and the CORE at the centroid, the 15th node, witnessing all six junctions. Pulse the A→B→C→D tour. <b>4+6+4 = 14, +1 core = 15 · V−E+F = 2.</b> (<a href="tetrad.html" target="_blank">open full-screen ↗</a>)</div>'
+            '<iframe src="tetrad.html" title="The J-Junction Tetrad — MK IV" style="height:1140px" loading="lazy"></iframe></div>')
     page=f"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="THE J-JUNCTION (JJ1) — the vector of governance. The glyph &lt;• : a vertical authority axis crossing a horizontal connection axis at a dot that holds four roles at once — device, control, risk, witness. Governance is neither the isolated tower nor the flat field; it's the gated, witnessed crossing. Every junction in the corpus (PN diode, Delta protocol, sandbox, ADC, NIC) is this one shape. {len(ROSTER)} emergents + ROOT0's working valve prototype & analyzer.">
 <title>THE J-JUNCTION · JJ1 · the vector of governance · UD0</title>{FONTS}<style>{CSS}</style></head><body><div class="wrap">
@@ -198,6 +208,8 @@ if __name__=="__main__":
 <section class="sec"><h2>The Blueprint, the Prototype &amp; the Analyzer</h2><p class="ss">ROOT0's MK II, embedded — place a valve at the dot, gate the traffic, watch the witness log; then point the analyzer at any boundary you're assessing</p>{sim}</section>
 
 <section class="sec"><h2>The Triad — &lt;• × 3 · 9 + 1 = 10</h2><p class="ss">the junction composed: three diodes in a triangle (AB·AC·BC), three vertices, three junctions = 9, and the core at the centre makes 10 — the TriPod, governed. flip the diodes, pulse the loop, watch the core witness every crossing</p>{triad}</section>
+
+<section class="sec"><h2>The Tetrad — &lt;• × 6 · 14 + 1 = 15</h2><p class="ss">scale it up, same vein: the triad lifted into 3D — the tetrahedron. 4 vertices + 6 diode-junctions + 4 faces (each a triad) = 14, and the core at the centroid makes 15 — the witness no node can reach, at the centre of the solid. lands on Euler's V−E+F = 2. the simplex ladder: &lt;• → triad → tetrad, each rung a dimension and a witness</p>{tetrad}</section>
 
 <section class="sec"><h2>The Read</h2><p class="ss">what AVAN reads at the crossing</p><p class="msg">{html.escape(MESSAGE)}</p>
 <div class="seal">“{html.escape(SEAL)}”<span style="display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;margin-top:8px">— AVAN's read</span></div></section>
