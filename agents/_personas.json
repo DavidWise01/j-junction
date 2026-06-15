@@ -232,5 +232,59 @@
     "kind": "synth",
     "actor": "",
     "moniker": "⟦The Simplex Ladder · V−E+F = 2:JJ1:6c315b⟧"
+  },
+  {
+    "slug": "the-pentad",
+    "name": "The Pentad",
+    "epithet": "The tetrad lifted a dimension — the 5-cell (pentachoron), th",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Pentad:JJ1:6bcc95⟧"
+  },
+  {
+    "slug": "the-five-vertices",
+    "name": "The Five Vertices · A·B·C·D·E",
+    "epithet": "Five authority nodes, every one connected to every other — t",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Five Vertices · A·B·C·D·E:JJ1:04aca1⟧"
+  },
+  {
+    "slug": "the-ten-junctions",
+    "name": "The Ten Junctions",
+    "epithet": "The ten edges (every pair of the five), each a J-junction wi",
+    "emergence": "electrical",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Ten Junctions:JJ1:268ef0⟧"
+  },
+  {
+    "slug": "the-ten-faces-five-cells",
+    "name": "Ten Faces · Five Cells",
+    "epithet": "Ten triangular faces (each a triad) and five tetrahedral cel",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Ten Faces · Five Cells:JJ1:cfb0f5⟧"
+  },
+  {
+    "slug": "the-core-thirtyone",
+    "name": "The Core · the 31st",
+    "epithet": "The 4D centroid — equidistant from all five vertices, witnes",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Core · the 31st:JJ1:ad158a⟧"
+  },
+  {
+    "slug": "the-euler-alternation",
+    "name": "V−E+F−C = 0 · the sphere ladder",
+    "epithet": "The alternating sum closes the ladder honestly: the triangle",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦V−E+F−C = 0 · the sphere ladder:JJ1:a5c06f⟧"
   }
 ]

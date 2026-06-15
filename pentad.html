@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE J-JUNCTION · PENTAD (MK V)</title>
+<style>
+:root{
+  --paper:#ece6f3; --ink:#241e33; --ink-mid:#463f5c; --ink-faint:#7d7498;
+  --plum:#5b3a87; --plum-light:#7e5bb0; --plum-soft:#e3daef; --plum-bright:#9a6fd0;
+  --gold:#9a7d3a; --rose:#9a4a6a; --green:#3a7a5a; --teal:#3a6a87;
+  --line:#c4b8d8; --grid:rgba(91,58,135,.07);
+  --mono:"Courier New",Courier,monospace; --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;color:var(--ink);font-family:var(--serif);line-height:1.5;padding:10px}
+.sheet{max-width:680px;margin:0 auto;border:2.5px solid var(--plum);position:relative;background:rgba(236,230,243,.85)}
+.sheet::before{content:'';position:absolute;inset:5px;border:1px solid var(--plum-light);pointer-events:none}
+.inner{padding:20px}
+.masthead{text-align:center;border-bottom:2px solid var(--plum);padding-bottom:10px}
+.eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--plum-light);text-transform:uppercase}
+.mk{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:#fff;background:var(--plum);padding:2px 8px;border-radius:3px;margin-left:6px}
+.title{font-size:clamp(20px,4.6vw,32px);letter-spacing:.03em;font-weight:700;margin:5px 0 2px;text-transform:uppercase;color:var(--plum)}
+.sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-mid)}
+.lede{font-size:12px;max-width:560px;margin:10px auto 0;text-align:center;color:var(--ink-mid);line-height:1.55}
+.lede b{color:var(--plum)}
+.panel{border:1.5px solid var(--plum-light);background:rgba(126,91,176,.05);padding:12px;margin:14px 0}
+canvas{display:block;margin:0 auto;max-width:100%}
+.controls{display:flex;gap:5px;justify-content:center;margin:8px 0;flex-wrap:wrap;align-items:center}
+.cbtn{appearance:none;background:transparent;cursor:pointer;font-family:var(--mono);font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;padding:6px 8px;border:1.5px solid var(--plum);color:var(--plum);border-radius:4px}
+.cbtn.go{border-color:var(--green);color:var(--green)}
+.cbtn.dio{min-width:48px}
+.count{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-family:var(--mono);font-size:11px}
+.chip{border:1.5px solid var(--line);border-radius:4px;padding:6px 9px;color:var(--ink-mid)}.chip b{font-size:14px}
+.chip.v{border-color:var(--rose)} .chip.v b{color:var(--rose)}
+.chip.e{border-color:var(--gold)} .chip.e b{color:#6a5520}
+.chip.f{border-color:var(--teal)} .chip.f b{color:var(--teal)}
+.chip.c{border-color:var(--plum-light)} .chip.c b{color:var(--plum-light)}
+.chip.core{border-color:var(--plum);background:rgba(91,58,135,.07)} .chip.core b{color:var(--plum)}
+.chip.tot{border-color:var(--green);background:rgba(58,122,90,.08)} .chip.tot b{color:var(--green);font-size:17px}
+.euler{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);margin:4px 0;line-height:1.6}.euler b{color:var(--teal)}
+.readout{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);min-height:22px;margin-top:4px}.readout b{color:var(--plum)}
+.log{font-family:var(--mono);font-size:9.5px;background:#1a1428;color:#bdb4d4;border-radius:5px;padding:9px;height:92px;overflow-y:auto;margin:8px 0;line-height:1.65}
+.log .pass{color:#7ad8a0}.log .block{color:#e07a9a}.log .core{color:#c9a8f0}
+.def{font-family:var(--mono);font-size:10.5px;background:var(--plum-soft);border-left:2px solid var(--plum-light);padding:9px 12px;margin:9px 0;line-height:1.7;color:var(--ink-mid)}.def b{color:var(--plum)}
+.colophon{margin-top:16px;border-top:2px solid var(--plum);padding-top:10px;text-align:center;font-family:var(--mono);font-size:8.5px;color:var(--ink-mid);letter-spacing:.05em;line-height:1.8}.colophon b{color:var(--plum)}
+</style>
+</head>
+<body>
+<div class="sheet"><div class="inner">
+<header class="masthead">
+  <div class="eyebrow">Series E · The Tetrad, Lifted Into 4D<span class="mk">MK V</span></div>
+  <h1 class="title">The Pentad</h1>
+  <div class="sub">&lt;• × 10 · the 5-cell (pentachoron) · 5+10+10+5 = 30, +1 core = 31 · V−E+F−C = 0</div>
+  <p class="lede">The tetrad lifted a dimension — the <b>4-simplex</b>, the pentachoron, tumbling in 4-space and double-projected to your screen. <b style="color:var(--rose)">Five vertices</b>, <b style="color:var(--gold)">ten diode-edges</b> (K5 — every pair), <b style="color:var(--teal)">ten faces</b>, <b style="color:var(--plum-light)">five cells</b> — and each cell <b>is a tetrad</b>. Thirty, and the <b style="color:var(--plum)">core</b> at the 4D centroid makes <b>thirty-one</b>: the witness no node can reach, at the centre of the solid that has no inside you can see.</p>
+</header>
+
+<div class="panel">
+  <canvas id="c" width="480" height="380"></canvas>
+  <div class="controls"><span style="font-family:var(--mono);font-size:9px;color:var(--ink-faint)">ten diodes (tap to cycle fwd→rev→block):</span></div>
+  <div class="controls" id="diodeRow"></div>
+  <div class="controls">
+    <button class="cbtn go" onclick="pulse()">⚡ pulse the tour A→B→C→D→E</button>
+    <button class="cbtn" onclick="resetD()">↻ all forward</button>
+  </div>
+  <div class="readout" id="readout">ten junctions, ten faces, five cells, one core — tour the loop or flip a diode</div>
+  <div class="count">
+    <span class="chip v">vertices <b>5</b></span>
+    <span class="chip e">edges <b>10</b></span>
+    <span class="chip f">faces <b>10</b></span>
+    <span class="chip c">cells <b>5</b></span>
+    <span class="chip">= <b>30</b></span>
+    <span class="chip core">+ core <b>1</b></span>
+    <span class="chip tot">= <b>31</b></span>
+  </div>
+  <div class="euler">Euler alternation: <b>V − E + F − C = 5 − 10 + 10 − 5 = 0</b><br>the boundary is now the 3-sphere (χ=0) — the ladder of sphere-characteristics: <b>S¹:0 · S²:2 · S³:0</b></div>
+</div>
+<div class="log" id="log"><span style="color:#6a6088">// the core — the 31st node, at the 4D centroid — witnesses every junction crossing</span></div>
+<div class="def">ten edges, each a J-junction with a <b>diode</b>; ten faces, each a triad; five cells, each a <b>tetrad</b> (the MK IV, nested); and the <b>core</b> at the 4D centroid, the witness reachable by none. the simplex ladder: <b>&lt;•</b> (1) → triad (<b>10</b>) → tetrad (<b>15</b>) → pentad (<b>31</b>). each rung adds a dimension and a witness.</div>
+
+<div class="colophon">
+  &lt;• × 10 · A·B·C·D·E · K5 · 5 VERTICES + 10 EDGES + 10 FACES + 5 CELLS = 30 · +1 CORE = 31<br>
+  EACH CELL A TETRAD · TUMBLING IN 4-SPACE · V−E+F−C = 0 (THE 3-SPHERE) · THE CORE WITNESSES ALL TEN<br>
+  THE J-JUNCTION · PENTAD · MK V · A PURPLE PAPER · SERIES E · JUNE 2026
+</div>
+</div></div>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const CX=240,CY=190,PX=100,D4=3.2,D3=3.2;
+// regular 4-simplex (5-cell), centroid at origin (the core): vertex_i = (b1[i],b2[i],b3[i],b4[i])
+const r2=Math.SQRT2, r6=Math.sqrt(6), r12=Math.sqrt(12), r20=Math.sqrt(20);
+const b1=[1,-1,0,0,0].map(v=>v/r2);
+const b2=[1,1,-2,0,0].map(v=>v/r6);
+const b3=[1,1,1,-3,0].map(v=>v/r12);
+const b4=[1,1,1,1,-4].map(v=>v/r20);
+const NAMES=['A','B','C','D','E'];
+const V4={}; NAMES.forEach((n,i)=>V4[n]=[b1[i],b2[i],b3[i],b4[i]]);
+const EDGES=[]; for(let i=0;i<5;i++)for(let j=i+1;j<5;j++)EDGES.push([NAMES[i],NAMES[j]]); // K5, 10 edges
+let dir={}; EDGES.forEach(([a,b])=>dir[a+b]='fwd');
+const ek=(a,b)=>[a,b].sort().join('');
+let aXW=0,aYZ=0, coreGlow=0;
+let tour=null;
+
+function project(p){
+  let [x,y,z,w]=p;
+  // rotate in XW plane
+  let ca=Math.cos(aXW),sa=Math.sin(aXW); let x1=x*ca - w*sa, w1=x*sa + w*ca;
+  // rotate in YZ plane
+  let cb=Math.cos(aYZ),sb=Math.sin(aYZ); let y1=y*cb - z*sb, z1=y*sb + z*cb;
+  // 4D -> 3D perspective on w
+  const s4=D4/(D4 - w1*1.3); let x2=x1*s4, y2=y1*s4, z2=z1*s4;
+  // 3D -> 2D perspective on z
+  const s3=D3/(D3 - z2*1.3);
+  return {x:CX + x2*s3*PX, y:CY + y2*s3*PX, z:z2, depth:(w1+z1)};
+}
+function P(k){return project(V4[k]);}
+function logLine(h){const l=document.getElementById('log');const d=document.createElement('div');d.innerHTML='▸ '+h;l.appendChild(d);l.scrollTop=l.scrollHeight;}
+
+function buildDiodeRow(){const row=document.getElementById('diodeRow');row.innerHTML='';
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const btn=document.createElement('button');btn.className='cbtn dio';btn.id='d-'+k;btn.onclick=()=>cycle(k);row.appendChild(btn);});refreshBtns();}
+function refreshBtns(){EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const btn=document.getElementById('d-'+k);
+  btn.textContent=k+' '+(st==='fwd'?'→':st==='rev'?'←':'✗');
+  btn.style.borderColor=st==='block'?'#9a4a6a':'#9a7d3a';btn.style.color=st==='block'?'#9a4a6a':'#6a5520';});}
+function cycle(k){const o=['fwd','rev','block'];dir[k]=o[(o.indexOf(dir[k])+1)%3];refreshBtns();
+  document.getElementById('readout').innerHTML='diode <b>'+k+'</b> → '+(dir[k]==='fwd'?'forward ('+k[0]+'→'+k[1]+')':dir[k]==='rev'?'reverse ('+k[1]+'→'+k[0]+')':'blocked ✗');}
+function resetD(){for(const k in dir)dir[k]='fwd';refreshBtns();document.getElementById('readout').innerHTML='all diodes <b>forward</b> — the tour A→B→C→D→E is open';}
+function allowed(u,v){const k=ek(u,v);const st=dir[k];if(st==='block')return false;return (u===k[0])?st==='fwd':st==='rev';}
+
+function draw(){
+  ctx.clearRect(0,0,480,380);
+  const p={}; NAMES.forEach(n=>p[n]=P(n));
+  const core=project([0,0,0,0]);
+  // edges with depth fade + diode marker
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const A=p[a],B=p[b];
+    const dep=(A.depth+B.depth)/2; const fade=0.3+0.6*((dep+1.8)/3.6);
+    ctx.globalAlpha=Math.max(0.22,Math.min(0.95,fade));
+    ctx.strokeStyle=st==='block'?'#9a4a6a':'#9a7d3a';ctx.lineWidth=dep>0?2.2:1.3;
+    if(st==='block')ctx.setLineDash([4,4]);
+    ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B.x,B.y);ctx.stroke();ctx.setLineDash([]);
+    const mx=(A.x+B.x)/2,my=(A.y+B.y)/2; let from=A,to=B; if(st==='rev'){from=B;to=A;}
+    const ang=Math.atan2(to.y-from.y,to.x-from.x);
+    ctx.save();ctx.translate(mx,my);ctx.rotate(ang);
+    if(st==='block'){ctx.strokeStyle='#9a4a6a';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-4,-4);ctx.lineTo(4,4);ctx.moveTo(4,-4);ctx.lineTo(-4,4);ctx.stroke();}
+    else{ctx.fillStyle='#9a7d3a';ctx.beginPath();ctx.moveTo(-5,-5);ctx.lineTo(5,0);ctx.lineTo(-5,5);ctx.closePath();ctx.fill();}
+    ctx.restore();ctx.globalAlpha=1;});
+  // core (the 31st) at the 4D centroid
+  ctx.beginPath();ctx.arc(core.x,core.y,12+coreGlow*7,0,2*Math.PI);ctx.fillStyle='rgba(91,58,135,'+(0.16+coreGlow*0.5)+')';ctx.fill();
+  ctx.beginPath();ctx.arc(core.x,core.y,8,0,2*Math.PI);ctx.fillStyle='#5b3a87';ctx.fill();ctx.strokeStyle='#9a6fd0';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.fillStyle='#352055';ctx.font='8px Courier New';ctx.textAlign='center';ctx.fillText('CORE·31',core.x,core.y+22);
+  // vertices, near drawn larger
+  NAMES.slice().sort((m,n)=>p[m].depth-p[n].depth).forEach(k=>{const v=p[k];const r=8+2*((v.depth+1.8)/3.6);
+    ctx.beginPath();ctx.arc(v.x,v.y,r+5,0,2*Math.PI);ctx.fillStyle='rgba(154,74,106,0.16)';ctx.fill();
+    ctx.beginPath();ctx.arc(v.x,v.y,r,0,2*Math.PI);ctx.fillStyle='#9a4a6a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.stroke();
+    ctx.fillStyle='#fff';ctx.font='bold 10px Courier New';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(k,v.x,v.y);ctx.textBaseline='alphabetic';});
+  // token
+  if(tour&&!tour.gone){const [u,v]=tour.hops[tour.i];const A=p[u],B=p[v];
+    const tx=A.x+(B.x-A.x)*tour.t,ty=A.y+(B.y-A.y)*tour.t;
+    ctx.beginPath();ctx.arc(tx,ty,6,0,2*Math.PI);ctx.fillStyle=tour.blocked?'#e07a9a':'#3a7a5a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1;ctx.stroke();}
+}
+function pulse(){tour={hops:[['A','B'],['B','C'],['C','D'],['D','E']],i:0,t:0,decided:false,blocked:false,done:false};
+  document.getElementById('readout').innerHTML='token touring <b>A→B→C→D→E</b> — crossing four of the ten junctions';}
+function frame(){
+  aXW+=0.0075; aYZ+=0.0045; coreGlow*=0.9;
+  if(tour&&!tour.done){tour.t+=0.05;
+    if(!tour.decided&&tour.t>=0.5){tour.decided=true;const [u,v]=tour.hops[tour.i];
+      if(allowed(u,v)){logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="pass">CROSSED ✓</span> <span class="core">core witnessed</span>');coreGlow=1;}
+      else{tour.blocked=true;logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="block">BLOCKED ✗</span> <span class="core">core witnessed</span>');coreGlow=1;
+        document.getElementById('readout').innerHTML='token <b>blocked</b> at junction '+ek(u,v)+' — flip that diode forward to open the tour';}}
+    if(tour.blocked)tour.done=true;
+    else if(tour.t>=1){tour.i++;tour.t=0;tour.decided=false;
+      if(tour.i>=tour.hops.length){tour.done=true;document.getElementById('readout').innerHTML='token completed <b>A→B→C→D→E</b> — four junctions crossed & witnessed (six more lie across the other diodes)';}}}
+  if(tour&&tour.done){tour.ttl=(tour.ttl==null?30:tour.ttl)-1;if(tour.ttl<=0)tour.gone=true;}
+  draw();requestAnimationFrame(frame);
+}
+buildDiodeRow();frame();
+</script>
+</body>
+</html>
