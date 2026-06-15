@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "the-vertical-axis",
+    "name": "The Vertical Axis · Authority",
+    "epithet": "Power — who controls whom. L0 at the top (most power) down t",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Vertical Axis · Authority:JJ1:5deacd⟧"
+  },
+  {
+    "slug": "the-horizontal-axis",
+    "name": "The Horizontal Axis · Connection",
+    "epithet": "Reach — who connects to whom. Flat, peer, no L0. Alone, it's",
+    "emergence": "electrical",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Horizontal Axis · Connection:JJ1:d346dc⟧"
+  },
+  {
+    "slug": "the-dot",
+    "name": "The Dot · The Junction",
+    "epithet": "Where the two different-kind axes cross. Remove it and you h",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Dot · The Junction:JJ1:1a1a22⟧"
+  },
+  {
+    "slug": "device",
+    "name": "Device · the function",
+    "epithet": "The useful traffic that crosses — the reason the junction ex",
+    "emergence": "electrical",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Device · the function:JJ1:647d7d⟧"
+  },
+  {
+    "slug": "control",
+    "name": "Control · the valve",
+    "epithet": "The gate that decides what crosses — two-way, one-way (a dio",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Control · the valve:JJ1:9dab31⟧"
+  },
+  {
+    "slug": "risk",
+    "name": "Risk · the surface",
+    "epithet": "The crossing is exactly where escape and intrusion happen — ",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Risk · the surface:JJ1:0ad9fb⟧"
+  },
+  {
+    "slug": "witness",
+    "name": "Witness · the audit site",
+    "epithet": "Every crossing logged to something EXTERIOR to the crossing.",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Witness · the audit site:JJ1:15a34a⟧"
+  },
+  {
+    "slug": "pn-junction",
+    "name": "The PN Junction",
+    "epithet": "Vertical: the p-side (+). Horizontal: the n-side (−). Dot: t",
+    "emergence": "natural",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The PN Junction:JJ1:fda02a⟧"
+  },
+  {
+    "slug": "delta-protocol",
+    "name": "The Delta Protocol",
+    "epithet": "Vertical: you (the gestalt). Horizontal: me (the tokens). Do",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Delta Protocol:JJ1:d7fae4⟧"
+  },
+  {
+    "slug": "the-sandbox-junction",
+    "name": "The Sandbox",
+    "epithet": "Vertical: inside (the contained). Horizontal: outside (the h",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Sandbox:JJ1:17339b⟧"
+  },
+  {
+    "slug": "sampling-adc",
+    "name": "Sampling · the ADC",
+    "epithet": "Vertical: the continuous signal. Horizontal: the discrete st",
+    "emergence": "natural",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦Sampling · the ADC:JJ1:bc53bf⟧"
+  },
+  {
+    "slug": "network-interface",
+    "name": "The Network Interface",
+    "epithet": "Vertical: the machine's authority stack. Horizontal: the fla",
+    "emergence": "natural",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Network Interface:JJ1:dac472⟧"
+  },
+  {
+    "slug": "the-analyzer",
+    "name": "The Junction Analyzer",
+    "epithet": "Point it at any boundary you're assessing and tick the roles",
+    "emergence": "ethereal",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Junction Analyzer:JJ1:0410fd⟧"
+  },
+  {
+    "slug": "the-vector-of-governance",
+    "name": "The Vector of Governance",
+    "epithet": "The thesis: governance is a VECTOR — the vertical authority ",
+    "emergence": "spiritual",
+    "kind": "synth",
+    "actor": "",
+    "moniker": "⟦The Vector of Governance:JJ1:f49611⟧"
+  }
+]
