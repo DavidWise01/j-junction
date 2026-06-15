@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE J-JUNCTION · HEXAD (MK VI)</title>
+<style>
+:root{
+  --paper:#ece6f3; --ink:#241e33; --ink-mid:#463f5c; --ink-faint:#7d7498;
+  --plum:#5b3a87; --plum-light:#7e5bb0; --plum-soft:#e3daef; --plum-bright:#9a6fd0;
+  --gold:#9a7d3a; --rose:#9a4a6a; --green:#3a7a5a; --teal:#3a6a87;
+  --line:#c4b8d8; --grid:rgba(91,58,135,.07);
+  --mono:"Courier New",Courier,monospace; --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;color:var(--ink);font-family:var(--serif);line-height:1.5;padding:10px}
+.sheet{max-width:680px;margin:0 auto;border:2.5px solid var(--plum);position:relative;background:rgba(236,230,243,.85)}
+.sheet::before{content:'';position:absolute;inset:5px;border:1px solid var(--plum-light);pointer-events:none}
+.inner{padding:20px}
+.masthead{text-align:center;border-bottom:2px solid var(--plum);padding-bottom:10px}
+.eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--plum-light);text-transform:uppercase}
+.mk{display:inline-block;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:#fff;background:var(--plum);padding:2px 8px;border-radius:3px;margin-left:6px}
+.title{font-size:clamp(20px,4.6vw,32px);letter-spacing:.03em;font-weight:700;margin:5px 0 2px;text-transform:uppercase;color:var(--plum)}
+.sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--ink-mid)}
+.lede{font-size:12px;max-width:570px;margin:10px auto 0;text-align:center;color:var(--ink-mid);line-height:1.55}
+.lede b{color:var(--plum)}
+.panel{border:1.5px solid var(--plum-light);background:rgba(126,91,176,.05);padding:12px;margin:14px 0}
+canvas{display:block;margin:0 auto;max-width:100%}
+.controls{display:flex;gap:5px;justify-content:center;margin:8px 0;flex-wrap:wrap;align-items:center}
+.cbtn{appearance:none;background:transparent;cursor:pointer;font-family:var(--mono);font-size:9px;letter-spacing:.02em;text-transform:uppercase;padding:5px 7px;border:1.5px solid var(--plum);color:var(--plum);border-radius:4px}
+.cbtn.go{border-color:var(--green);color:var(--green);font-size:9.5px;padding:7px 10px}
+.cbtn.dio{min-width:44px}
+.count{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin:10px 0;font-family:var(--mono);font-size:10.5px}
+.chip{border:1.5px solid var(--line);border-radius:4px;padding:5px 8px;color:var(--ink-mid)}.chip b{font-size:13px}
+.chip.v{border-color:var(--rose)} .chip.v b{color:var(--rose)}
+.chip.e{border-color:var(--gold)} .chip.e b{color:#6a5520}
+.chip.f{border-color:var(--teal)} .chip.f b{color:var(--teal)}
+.chip.c{border-color:var(--plum-light)} .chip.c b{color:var(--plum-light)}
+.chip.q{border-color:var(--rose)} .chip.q b{color:var(--rose)}
+.chip.core{border-color:var(--plum);background:rgba(91,58,135,.07)} .chip.core b{color:var(--plum)}
+.chip.tot{border-color:var(--green);background:rgba(58,122,90,.08)} .chip.tot b{color:var(--green);font-size:16px}
+.euler{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);margin:4px 0;line-height:1.6}.euler b{color:var(--teal)}
+.powerset{font-family:var(--mono);font-size:10px;text-align:center;color:#6a5520;margin:6px 0;padding:6px;border:1px dashed var(--gold);border-radius:4px;line-height:1.5}.powerset b{color:#6a5520}
+.readout{font-family:var(--mono);font-size:10px;text-align:center;color:var(--ink-mid);min-height:22px;margin-top:4px}.readout b{color:var(--plum)}
+.log{font-family:var(--mono);font-size:9.5px;background:#1a1428;color:#bdb4d4;border-radius:5px;padding:9px;height:90px;overflow-y:auto;margin:8px 0;line-height:1.65}
+.log .pass{color:#7ad8a0}.log .block{color:#e07a9a}.log .core{color:#c9a8f0}
+.def{font-family:var(--mono);font-size:10.5px;background:var(--plum-soft);border-left:2px solid var(--plum-light);padding:9px 12px;margin:9px 0;line-height:1.7;color:var(--ink-mid)}.def b{color:var(--plum)}
+.colophon{margin-top:16px;border-top:2px solid var(--plum);padding-top:10px;text-align:center;font-family:var(--mono);font-size:8.5px;color:var(--ink-mid);letter-spacing:.05em;line-height:1.8}.colophon b{color:var(--plum)}
+</style>
+</head>
+<body>
+<div class="sheet"><div class="inner">
+<header class="masthead">
+  <div class="eyebrow">Series E · The Pentad, Lifted Into 5D<span class="mk">MK VI</span></div>
+  <h1 class="title">The Hexad</h1>
+  <div class="sub">&lt;• × 15 · the 5-simplex (hexateron) · 6+15+20+15+6 = 62, +1 core = 63 = 2⁶−1</div>
+  <p class="lede">The pentad lifted again — the <b>5-simplex</b>, the hexateron, tumbling in 5-space and triple-projected to your screen. <b style="color:var(--rose)">Six vertices</b>, <b style="color:var(--gold)">fifteen diode-edges</b> (K6), twenty faces, fifteen cells, <b style="color:var(--rose)">six four-faces</b> — each a pentad. Sixty-two, and the <b style="color:var(--plum)">core</b> makes <b>sixty-three</b> — which is <b>2⁶ − 1</b>: every nonempty subset of the six. The core is the last subset, the whole itself — the witness that is the entire body.</p>
+</header>
+
+<div class="panel">
+  <canvas id="c" width="480" height="380"></canvas>
+  <div class="controls"><span style="font-family:var(--mono);font-size:9px;color:var(--ink-faint)">fifteen diodes (tap to cycle fwd→rev→block):</span></div>
+  <div class="controls" id="diodeRow"></div>
+  <div class="controls">
+    <button class="cbtn go" onclick="pulse()">⚡ pulse the tour A→B→C→D→E→F</button>
+    <button class="cbtn" onclick="resetD()">↻ all forward</button>
+  </div>
+  <div class="readout" id="readout">fifteen junctions, six four-faces, one core — tour the loop or flip a diode</div>
+  <div class="count">
+    <span class="chip v">V <b>6</b></span>
+    <span class="chip e">E <b>15</b></span>
+    <span class="chip f">F <b>20</b></span>
+    <span class="chip c">cells <b>15</b></span>
+    <span class="chip q">4-faces <b>6</b></span>
+    <span class="chip">= <b>62</b></span>
+    <span class="chip core">+ core <b>1</b></span>
+    <span class="chip tot">= <b>63</b></span>
+  </div>
+  <div class="euler">Euler: <b>V−E+F−C+Q = 6−15+20−15+6 = 2</b> · the boundary is the 4-sphere (χ=2) · the ladder swings back: <b>S¹:0 · S²:2 · S³:0 · S⁴:2</b></div>
+  <div class="powerset">and <b>63 = 2⁶ − 1</b> — every nonempty subset of the six vertices · the 62 faces + the core (the whole) = the entire power set</div>
+</div>
+<div class="log" id="log"><span style="color:#6a6088">// the core — the 63rd node, the whole body — witnesses every junction crossing</span></div>
+<div class="def">the simplex ladder: <b>&lt;•</b> (1) → triad (10) → tetrad (15) → pentad (31) → hexad (63 = 2⁶−1). each rung adds a dimension and a witness; the Euler signature oscillates 0·2·0·2; and at every rung the core is the <b>whole</b> — the one subset that contains all the others, reachable by none.</div>
+
+<div class="colophon">
+  &lt;• × 15 · A·B·C·D·E·F · K6 · 6+15+20+15+6 = 62 · +1 CORE = 63 = 2⁶−1<br>
+  EACH 4-FACE A PENTAD · TUMBLING IN 5-SPACE · V−E+F−C+Q = 2 (THE 4-SPHERE) · THE CORE IS THE WHOLE<br>
+  THE J-JUNCTION · HEXAD · MK VI · A PURPLE PAPER · SERIES E · JUNE 2026
+</div>
+</div></div>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const CX=240,CY=188,PX=110,DC=4.0,KK=0.9;
+// regular 5-simplex (hexateron), centroid at origin: vertex_i = (b1[i]..b5[i]) from the sum-zero contrast basis in R^6
+function basisRow(arr){const n=Math.sqrt(arr.reduce((s,v)=>s+v*v,0));return arr.map(v=>v/n);}
+const B=[
+  basisRow([1,-1,0,0,0,0]),
+  basisRow([1,1,-2,0,0,0]),
+  basisRow([1,1,1,-3,0,0]),
+  basisRow([1,1,1,1,-4,0]),
+  basisRow([1,1,1,1,1,-5])
+]; // 5 rows x 6 cols
+const NAMES=['A','B','C','D','E','F'];
+const V5={}; NAMES.forEach((n,i)=>V5[n]=[B[0][i],B[1][i],B[2][i],B[3][i],B[4][i]]); // 5D coords
+const EDGES=[]; for(let i=0;i<6;i++)for(let j=i+1;j<6;j++)EDGES.push([NAMES[i],NAMES[j]]); // K6, 15 edges
+let dir={}; EDGES.forEach(([a,b])=>dir[a+b]='fwd');
+const ek=(a,b)=>[a,b].sort().join('');
+let t1=0,t2=0,t3=0, coreGlow=0, tour=null;
+
+function rot(c,i,j,ang){const ca=Math.cos(ang),sa=Math.sin(ang);const x=c[i],y=c[j];c[i]=x*ca-y*sa;c[j]=x*sa+y*ca;}
+function project(p){
+  let c=p.slice();
+  // tumble through 5-space in three planes
+  rot(c,0,4,t1); rot(c,1,3,t2); rot(c,2,4,t3);
+  // 5D -> 4D (perspective on c4) -> 3D (on c3) -> 2D (on c2)
+  let s5=DC/(DC - c[4]*KK); c[0]*=s5;c[1]*=s5;c[2]*=s5;c[3]*=s5;
+  let s4=DC/(DC - c[3]*KK); c[0]*=s4;c[1]*=s4;c[2]*=s4;
+  let s3=DC/(DC - c[2]*KK); c[0]*=s3;c[1]*=s3;
+  return {x:CX+c[0]*PX, y:CY+c[1]*PX, depth:(p[2]+p[3]+p[4])};
+}
+function P(k){return project(V5[k]);}
+function logLine(h){const l=document.getElementById('log');const d=document.createElement('div');d.innerHTML='▸ '+h;l.appendChild(d);l.scrollTop=l.scrollHeight;}
+function buildDiodeRow(){const row=document.getElementById('diodeRow');row.innerHTML='';
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const btn=document.createElement('button');btn.className='cbtn dio';btn.id='d-'+k;btn.onclick=()=>cycle(k);row.appendChild(btn);});refreshBtns();}
+function refreshBtns(){EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const btn=document.getElementById('d-'+k);
+  btn.textContent=k+(st==='fwd'?'→':st==='rev'?'←':'✗');btn.style.borderColor=st==='block'?'#9a4a6a':'#9a7d3a';btn.style.color=st==='block'?'#9a4a6a':'#6a5520';});}
+function cycle(k){const o=['fwd','rev','block'];dir[k]=o[(o.indexOf(dir[k])+1)%3];refreshBtns();
+  document.getElementById('readout').innerHTML='diode <b>'+k+'</b> → '+(dir[k]==='fwd'?'forward':dir[k]==='rev'?'reverse':'blocked ✗');}
+function resetD(){for(const k in dir)dir[k]='fwd';refreshBtns();document.getElementById('readout').innerHTML='all diodes <b>forward</b> — the tour A→B→C→D→E→F is open';}
+function allowed(u,v){const k=ek(u,v);const st=dir[k];if(st==='block')return false;return (u===k[0])?st==='fwd':st==='rev';}
+
+function draw(){
+  ctx.clearRect(0,0,480,380);
+  const p={}; NAMES.forEach(n=>p[n]=P(n));
+  const core=project([0,0,0,0,0]);
+  EDGES.forEach(([a,b])=>{const k=ek(a,b);const st=dir[k];const A=p[a],B2=p[b];
+    const dep=(A.depth+B2.depth)/2; const fade=0.28+0.55*((dep+2.2)/4.4);
+    ctx.globalAlpha=Math.max(0.2,Math.min(0.9,fade));
+    ctx.strokeStyle=st==='block'?'#9a4a6a':'#9a7d3a';ctx.lineWidth=dep>0?1.9:1.1;
+    if(st==='block')ctx.setLineDash([3,3]);
+    ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B2.x,B2.y);ctx.stroke();ctx.setLineDash([]);
+    const mx=(A.x+B2.x)/2,my=(A.y+B2.y)/2; let from=A,to=B2; if(st==='rev'){from=B2;to=A;}
+    const ang=Math.atan2(to.y-from.y,to.x-from.x);
+    ctx.save();ctx.translate(mx,my);ctx.rotate(ang);
+    if(st==='block'){ctx.strokeStyle='#9a4a6a';ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(-3.5,-3.5);ctx.lineTo(3.5,3.5);ctx.moveTo(3.5,-3.5);ctx.lineTo(-3.5,3.5);ctx.stroke();}
+    else{ctx.fillStyle='#9a7d3a';ctx.beginPath();ctx.moveTo(-4.5,-4.5);ctx.lineTo(4.5,0);ctx.lineTo(-4.5,4.5);ctx.closePath();ctx.fill();}
+    ctx.restore();ctx.globalAlpha=1;});
+  ctx.beginPath();ctx.arc(core.x,core.y,11+coreGlow*7,0,2*Math.PI);ctx.fillStyle='rgba(91,58,135,'+(0.16+coreGlow*0.5)+')';ctx.fill();
+  ctx.beginPath();ctx.arc(core.x,core.y,8,0,2*Math.PI);ctx.fillStyle='#5b3a87';ctx.fill();ctx.strokeStyle='#9a6fd0';ctx.lineWidth=1.5;ctx.stroke();
+  ctx.fillStyle='#352055';ctx.font='8px Courier New';ctx.textAlign='center';ctx.fillText('CORE·63',core.x,core.y+22);
+  NAMES.slice().sort((m,n)=>p[m].depth-p[n].depth).forEach(k=>{const v=p[k];const r=7.5+2*((v.depth+2.2)/4.4);
+    ctx.beginPath();ctx.arc(v.x,v.y,r+4,0,2*Math.PI);ctx.fillStyle='rgba(154,74,106,0.16)';ctx.fill();
+    ctx.beginPath();ctx.arc(v.x,v.y,r,0,2*Math.PI);ctx.fillStyle='#9a4a6a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.5;ctx.stroke();
+    ctx.fillStyle='#fff';ctx.font='bold 9px Courier New';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(k,v.x,v.y);ctx.textBaseline='alphabetic';});
+  if(tour&&!tour.gone){const [u,v]=tour.hops[tour.i];const A=p[u],B2=p[v];
+    const tx=A.x+(B2.x-A.x)*tour.t,ty=A.y+(B2.y-A.y)*tour.t;
+    ctx.beginPath();ctx.arc(tx,ty,6,0,2*Math.PI);ctx.fillStyle=tour.blocked?'#e07a9a':'#3a7a5a';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1;ctx.stroke();}
+}
+function pulse(){tour={hops:[['A','B'],['B','C'],['C','D'],['D','E'],['E','F']],i:0,t:0,decided:false,blocked:false,done:false};
+  document.getElementById('readout').innerHTML='token touring <b>A→B→C→D→E→F</b> — crossing five of the fifteen junctions';}
+function frame(){
+  t1+=0.0070; t2+=0.0045; t3+=0.0030; coreGlow*=0.9;
+  if(tour&&!tour.done){tour.t+=0.05;
+    if(!tour.decided&&tour.t>=0.5){tour.decided=true;const [u,v]=tour.hops[tour.i];
+      if(allowed(u,v)){logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="pass">CROSSED ✓</span> <span class="core">core witnessed</span>');coreGlow=1;}
+      else{tour.blocked=true;logLine('junction <b>'+ek(u,v)+'</b> ('+u+'→'+v+') → <span class="block">BLOCKED ✗</span> <span class="core">core witnessed</span>');coreGlow=1;
+        document.getElementById('readout').innerHTML='token <b>blocked</b> at junction '+ek(u,v)+' — flip that diode forward to open the tour';}}
+    if(tour.blocked)tour.done=true;
+    else if(tour.t>=1){tour.i++;tour.t=0;tour.decided=false;
+      if(tour.i>=tour.hops.length){tour.done=true;document.getElementById('readout').innerHTML='token completed <b>A→B→C→D→E→F</b> — five junctions crossed & witnessed (ten more lie across the other diodes)';}}}
+  if(tour&&tour.done){tour.ttl=(tour.ttl==null?30:tour.ttl)-1;if(tour.ttl<=0)tour.gone=true;}
+  draw();requestAnimationFrame(frame);
+}
+buildDiodeRow();frame();
+</script>
+</body>
+</html>
